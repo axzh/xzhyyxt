@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/baseData/category_add.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/baseData/category_graph.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/baseData/category_list.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/baseData/med_add.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/baseData/med_count.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/baseData/med_list.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/baseData/med_list_nopaging.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/baseData/med_query.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/baseData/med_save.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/baseData/med_sell.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/baseData/med_update.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/baseData/med_view.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/bottom.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/error.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/left.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/login.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/manager.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/require/req_add.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/require/req_list.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/require/req_save.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/require/req_update.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/sell/sell_add.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/sell/sell_list.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/sell/sell_order.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/sell/sell_query.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/sell/sell_seq_list.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/system/user_add.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/system/user_list.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/system/user_password.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/staticpage/top.html" charset="UTF-8" />
+  </component>
+</project>
