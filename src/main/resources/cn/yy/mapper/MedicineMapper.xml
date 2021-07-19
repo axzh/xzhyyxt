@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.yy.mapper.MedicineMapper">
+    <insert id="addMedicine" parameterType="medicine">
+        insert into tb_medicine (medNo,name,factoryAdd,description,price,medCount,photoPath,cateGoryId)
+        values (#{medNo},#{name},#{factoryAdd},#{description},#{price},#{medCount},#{photoPath},#{categoryId})
+    </insert>
+
+
+    <sql id="mewdicinePage">
+        <where>
+            <if test="name != null and name !=''">
+                and name like'%${name}%'
+            </if>
+            <if test="medNo != null and medNo !=''">
+                and medNo =#{medNo}
+            </if>
+            <if test="factoryAdd != null and factoryAdd !=''">
+                and factoryAdd=#{factoryAdd}
+            </if>
+            <if test="description != null and description !=''">
+                and description =#{description}
+            </if>
+            <if test="type ==3">
+                and medCount = #{medCount}
+            </if>
+            <if test="type ==1">
+                and medCount > #{medCount}
+            </if>
+            <if test="type ==-1">
+                and medCount &lt; #{medCount}
+            </if>
+        </where>
+    </sql>
+    <select id="findMedicineList" parameterType="queryVo" resultType="medicine">
+        select * from tb_medicine
+        <include refid="mewdicinePage"/>
+    </select>
+
+    <select id="findMedicine" resultType="medicine">
+        select * from tb_medicine
+    </select>
+
+    <update id="updateMedicine" parameterType="medicine">
+        update tb_medicine set factoryAdd=#{factoryAdd},description=#{description},medCount=#{medCount} where id=#{id}
+    </update>
+
+    <delete id="removeMedicineById" parameterType="int">
+        delete from tb_medicine where id = #{id};
+    </delete>
+
+    <update id="sellCount" parameterType="medicine">
+        update tb_medicine set medCount=medCount-#{medCount} where id=#{id}
+    </update>
+</mapper>

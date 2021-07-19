@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.yy.mapper.CategoryMapper">
+
+    <insert id="addCategory" parameterType="category">
+        insert into tb_category(name,description,createTime) values (#{name},#{description},#{createTime});
+    </insert>
+
+    <select id="findCategoryListByPage" resultType="category">
+        select * from tb_category
+    </select>
+
+    <select id="findCategoryList" resultType="category">
+        select * from tb_category
+    </select>
+
+    <update id="updateCategory" parameterType="category">
+         update tb_category set name=#{name},description=#{description}  where id=#{id}
+    </update>
+
+    <delete id="removeCategory" parameterType="int">
+        delete from tb_category where id = #{id};
+    </delete>
+</mapper>

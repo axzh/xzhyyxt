@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.yy.mapper.SelldetailMapper">
+
+    <select id="findAllSelldetail" resultType="selldetail">
+        select * from tb_selldetail order by id
+    </select>
+    <select id="findAllUser" resultType="user">
+        select * from tb_user;
+    </select>
+    <select id="findSelldetailBycreateTime" parameterType="beginandend" resultType="selldetail">
+        select * from tb_selldetail
+        <where>
+            <if test="begin!=null and begin!=''"> and sellTime &gt;=#{begin}</if>
+            <if test="end!=null and end!=''"> and sellTime &lt;=#{end}</if>
+        </where>
+    </select>
+    <select id="querySelldetailBySellname" parameterType="string" resultType="selldetail">
+        select * from tb_selldetail where sellName like '%${keyword}%'
+    </select>
+    <select id="findMedicineById" parameterType="int" resultType="medicine">
+         select * from tb_medicine where id=#{id}
+    </select>
+    <select id="findAllCategortManage" resultType="category">
+        select  * from tb_category order by id
+    </select>
+
+    <insert id="addDetail" parameterType="selldetail">
+         insert into tb_selldetail (sellName,sellPrice,sellCount,sellTime,medid,userid,username)
+        values (#{sellName},#{sellPrice},#{sellCount},#{sellTime},#{medid},#{userid},#{username})
+    </insert>
+
+    <select id="findMedicine" parameterType="int" resultType="medicine">
+        select * from tb_medicine where id = #{id}
+    </select>
+</mapper>
