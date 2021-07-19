@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.yy.mapper.StockMapper">
+    <select id="findAllstock" resultType="medicinedemand">
+        select * from tb_medicinedemand order BY id
+    </select>
+    <select id="findAllMedicine" resultType="medicine">
+        select * from tb_medicine order by id
+    </select>
+    <select id="findMedicinedemandById" parameterType="int" resultType="medicinedemand">
+        select * from tb_medicinedemand where id=#{id}
+    </select>
+    <update id="updateMedicinedemand" parameterType="medicinedemand">
+          update tb_medicinedemand set demandcount=#{demandcount} where id=#{id}
+    </update>
+    <select id="queryMedicinedemand" parameterType="string" resultType="medicinedemand">
+        SELECT * FROM tb_medicinedemand
+        <where><if test="keyWord != null and keyWord != ''">
+            or name like '%${keyword}%'
+            or medNo like '%${keyword}%'
+            or factoryAdd like '%${keyword}%'
+        </if></where>
+        order by id
+    </select>
+    <delete id="deleteStock" parameterType="int">
+        delete from tb_medicinedemand where id=#{id}
+    </delete>
+    <select id="findAllcategory" resultType="category">
+        select * from tb_category ;
+    </select>
+    <insert id="addMedicinedemand" parameterType="medicinedemand">
+    insert into tb_medicinedemand(medNo,name,factoryAdd,description,price,photoPath,categoryId,demandcount) values (#{medNo},#{name},#{factoryAdd},#{description},#{price},#{photoPath},#{categoryId},#{demandcount})
+    </insert>
+
+
+</mapper>
